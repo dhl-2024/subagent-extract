@@ -1,0 +1,4 @@
+-r requirements.txt
+reportlab>=4.0
+# Optional: JSON Schema validator; built-in required-field validation remains available.
+jsonschema>=4.20
