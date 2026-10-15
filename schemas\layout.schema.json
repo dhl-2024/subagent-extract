@@ -1,2 +1,0 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["module_count","module_model","drawing_annotation","density","confidence","source_layer"],"properties":{"module_count":{"type":"integer","minimum":1},"module_model":{"type":"string"},"drawing_annotation":{"type":["string","null"]},"density":{"type":"number"},"confidence":{"enum":["extracted","derived","assumed"]},"source_layer":{"type":["string","null"]},"recognition_path":{"enum":["L0_annotation","L1_dxf_block","L2_pdf_vector","L3_visual"]}},"additionalProperties":true}
-
