@@ -1,0 +1,36 @@
+name: subagent-extract
+version: 1.0
+cases:
+  - id: A
+    module_power: 630
+    expected: exact_match
+  - id: B
+    module_power: 580
+    expected_error: E1001
+  - id: C
+    module_power: [600, 605, 610, 615, 620, 625, 630]
+    expected: every_bin_matches_exactly
+  - id: D
+    inverter_power: 151
+    expected_error: E2001
+  - id: E
+    drawing_annotation: "共128块"
+    expected_path: L0_annotation
+  - id: F
+    recognition_path: L2_pdf_vector
+    density: 0.99
+    expected: density_does_not_block
+  - id: G
+    annotation_count: 128
+    recognized_count: 126
+    expected_warning: W3002
+  - id: H
+    missing_field: voc
+    expected_error: E1003
+  - id: I
+    schema_version: pv-collect-v0.9
+    expected_error: E1004
+  - id: J
+    expected: identical_outputs_except_timestamps
+  - id: K
+    expected: every_leaf_has_value_unit_source_confidence
